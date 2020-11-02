@@ -32,7 +32,7 @@ Create a function to remove a character at the specified position of a given str
 */
 const frase = function (str) {
     let ar = str.split("");
-    let br = ar.splice(0, );
+    let br = ar.splice(0, 4);
     return br.join('');
 }
 console.log(frase('sued'))
@@ -170,14 +170,41 @@ Types of angles:
     btuse angle: An angle between 90 and 180 degrees.
     Straight angle: A 180 degree angle.*/
 
+const angleType = function (angle) {
+    if (angle < 90) {
+        return "Acute angle.";
+    }
+    if (angle === 90) {
+        return "Right angle.";
+    }
+    if (angle < 180) {
+        return "Obtuse angle.";
+    }
+    return "Straight angle.";
+}
+
+console.log(angleType(47))
+console.log(angleType(90))
+console.log(angleType(145))
+console.log(angleType(180))
+
 /*13)
 
 Create a function to find the index of the greatest element of a given array of integers*/
-
+const getMaxOfArray = function (numArray) {
+    return Math.max.apply(null, numArray);
+}
+console.log(getMaxOfArray([1, 2, 3, 4, 100000, 9827359, 9827359.2]))
 /*14)
 
 Create a function to get the largest even number from an array of integers.*/
 
+const GetMaxEven = function (numArray) {
+
+
+
+
+}
 /*15)
 
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.*/
