@@ -201,14 +201,22 @@ Create a function to get the largest even number from an array of integers.*/
 
 const GetMaxEven = function (numArray) {
 
-
-
-
+    function evenArr(x) {
+        return x % 2 === 0;
+    }
+    let filtered = numArray.filter(evenArr);
+    return Math.max.apply(null, filtered);
 }
+console.log(GetMaxEven([1, 2, 3, 4, 5, 6, 7, 100, 101, 1000000.3]))
 /*15)
 
 Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50.*/
-
+const checkNumb = function (a, b) {
+    let answer;
+    a === 50 || b === 50 || a + b === 50 ? answer = true : answer = false;
+    return answer;
+}
+console.log(checkNumb(1, 49))
 /*16)
 
 Create a function to check from two given integers, whether one is positive and another one is negative.*/
